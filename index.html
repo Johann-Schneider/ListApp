@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MultiList</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button onclick="document.body.classList.toggle('dark')">
+      Toggle Dark Mode
+    </button>
+    <form onsubmit="add(); return false;">
+      <input type="text" placeholder="Text eingeben" class="eingabe" />
+      <button type="submit" class="addbtn">Hinzufügen</button>
+    </form>
+
+    <button onclick="clearAll()" style="margin-top: 10px">Alle löschen</button>
+
+    <ul class="liste"></ul>
+
+    <script>
+      function add() {
+        const input = document.querySelector(".eingabe");
+        const ul = document.querySelector(".liste");
+        const text = input.value.trim();
+
+        if (text !== "") {
+          const li = document.createElement("li");
+          const span = document.createElement("span");
+          const removeBtn = document.createElement("button");
+
+          span.textContent = text;
+
+          removeBtn.textContent = "Entfernen";
+          removeBtn.onclick = () => {
+            li.remove();
+          };
+
+          li.appendChild(span);
+          li.appendChild(removeBtn);
+
+          ul.appendChild(li);
+
+          input.value = "";
+        }
+      }
+
+      function clearAll() {
+        const ul = document.querySelector(".liste");
+        ul.innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

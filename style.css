@@ -1,0 +1,119 @@
+body {
+  font-family: "Open Sans", "Roboto", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input.eingabe {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input.eingabe:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+body.dark button {
+  background-color: #4a90e2;
+}
+
+body.dark button:hover {
+  background-color: #357ab8;
+}
+
+ul.liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.liste li {
+  background-color: #ffffff;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+body.dark ul.liste li {
+  background-color: #2b2b3d;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+ul.liste li span {
+  flex-grow: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+ul.liste li button {
+  background-color: #dc3545;
+}
+
+ul.liste li button:hover {
+  background-color: #a71d2a;
+}
+
+body.dark ul.liste li button {
+  background-color: #ff5c5c;
+}
+
+body.dark ul.liste li button:hover {
+  background-color: #d94343;
+}
+
+body > button:first-of-type {
+  margin-bottom: 20px;
+  background-color: #6c757d;
+}
+
+body > button:first-of-type:hover {
+  background-color: #5a6268;
+}
+
+body.dark > button:first-of-type {
+  background-color: #999;
+}
+
+body.dark > button:first-of-type:hover {
+  background-color: #888;
+}
